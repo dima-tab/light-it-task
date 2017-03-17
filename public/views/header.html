@@ -1,0 +1,8 @@
+<header class="fullArea clear-fix">
+    <a href="#" class="logoContainer">
+        <h1 class="signature">Best Advisory Network</h1>
+    </a>
+    <a class="button buttonHeader" ng-if="!$root.token" ng-click="userRegistrationBtnClick()">Sign up</a>
+    <a class="button buttonHeader" ng-if="!$root.token" ng-click="userLoginBtnClick()">Sign in</a>
+    <a class="button buttonHeader" ng-if="$root.token" ng-click="userLogoutBtnClick()">Logout</a>
+</header>

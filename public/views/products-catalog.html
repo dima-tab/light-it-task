@@ -1,0 +1,11 @@
+<div class="main fullArea clear-fix">
+    <div class="catalogPlace">
+        <div class="catalogBox box" ng-repeat="product in productsList track by $index">
+            <div  ng-style="{'background-image':'url(http://smktesting.herokuapp.com/static/' + product.img + ')'}"
+                    class="catalogImage"></div>
+            <h2 class="catalogTitle">{{ product.title }}</h2>
+            <div class="shortDescription">{{ product.text }}</div>
+            <a class="button" ng-href="#/{{product.id}}">View more</a>
+        </div>
+    </div>
+</div>

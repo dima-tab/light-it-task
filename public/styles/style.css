@@ -1,0 +1,409 @@
+/* ******************** Fonts ******************** */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+/* ******************** Common styles ******************** */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    font-size: 10px;
+    color: #333;
+}
+h3 {
+    margin: 0;
+    font-size: 2.5em;
+    line-height: normal;
+    color: #777;
+}
+h2 {
+    margin: 0;
+}
+
+.delimiter {
+    width: calc(100% + 2em);
+    margin: 12px 0 0 -1em;
+}
+.fullArea {
+    position: relative;
+    width: 100%;
+    min-width: 300px;
+}
+.clear-fix::after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: bold;
+    background-color: #4573a9;
+    color: whitesmoke;
+    border-radius: 3px;
+    margin-right: 40px;
+    text-transform: uppercase;
+}
+.button:hover {
+    background-color: #5389c8;
+    color: white;
+}
+.buttonHeader:last-child {
+    margin-right: 20px;
+}
+.buttonDefault:hover {
+    color: #333333;
+    background-color: white;
+}
+.buttonDefault {
+    position: relative !important; /* style toastr fix */
+    float: right;
+    margin-right: auto;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    border: 1px solid lightgray;
+    color: #333333;
+}
+.buttonDefault:before {
+    display: none; /* style toastr fix */
+}
+/* ******************** Header ******************** */
+header {
+    background-color: #282b2c;
+    padding: 20px 0;
+}
+header a {
+    float: right;
+}
+.logoContainer {
+    position: relative;
+    float: left;
+    margin-left: 40px;
+    color: white;
+    cursor: pointer;
+}
+.signature {
+    margin: 0;
+    font-size: 3em;
+    font-weight: normal;
+    position: relative;
+    padding-left: 53px;
+}
+.signature:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    background-image: url("./../img/logo.png");
+    width: 33px;
+    height: 40px;
+}
+/* ******************** Main styles ******************** */
+.main {
+    position: relative;
+    padding: 40px;
+    margin: 0 auto -61px auto;
+    max-width: 1366px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    min-height: 100vh;
+}
+.main:after {
+    content: "";
+    height: 61px;
+}
+.catalogPlace {
+    position: relative;
+    text-align: justify;
+    text-align-last: center;
+}
+.catalogBox {
+    display: inline-block;
+    width: 24.2%;
+    padding: 25px;
+    margin: 0 5px 15px 5px;
+    box-sizing: border-box;
+    vertical-align: top;
+    text-align-last: left;
+    transition: .5s ease;
+
+    border: 2px solid #e6ecee;
+    border-radius: 4px;
+    box-shadow: 0 3px 3px 0 #ccc;
+}
+.catalogBox:hover {
+    background-color: rgba(0,0,0,.05);
+}
+.catalogBox .catalogTitle, .catalogBox .shortDescription, .catalogBox a  {
+    margin-top: 1.5em;
+}
+.catalogImage {
+    padding-top: 70%;
+    box-shadow: 0 0 20px 0 #ccc inset;
+    background: center no-repeat;
+    background-size: 75%;
+}
+.catalogTitle {
+    text-align: left;
+    font-size: 2em;
+    font-weight: bold;
+}
+.shortDescription {
+    font-size: 1.4em;
+    max-height: 50px;
+    overflow: hidden;
+}
+/* ******************** Footer ******************** */
+footer {
+    background-color: #282b2c;
+    padding: 20px 0;
+}
+footer span {
+    font-size: 1.5em;
+    color: lightgray;
+    margin: 10px 10px 10px 40px;
+    cursor: default;
+}
+
+/* ******************** PRODUCT PAGE styles ******************** */
+.productPageBox {
+    padding: 25px;
+    box-sizing: border-box;
+    width: 410px;
+    text-align: justify;
+    float: left;
+    border: 2px solid #e6ecee;
+    border-radius: 4px;
+    box-shadow: 0 3px 3px 0 #ccc;
+}
+.productPageBox:hover {
+    background-color: transparent;
+}
+.star {
+    display: inline-block;
+    background: url("./../img/star.png") no-repeat;
+    background-size: contain;
+    width: 25px;
+    height: 24px;
+}
+.activeStar {
+    background-image: url("./../img/activeStar.png");
+}
+.productPageImage {
+    max-width: 600px;
+    padding-top: 80%;
+    box-shadow: 0 0 20px 0 #ccc inset;
+    background: center no-repeat;
+    background-size: 90%;
+}
+.productPageTitle {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+.productDescription {
+    font-size: 1.6em;
+}
+.productDescription, .productPageRating, .productPageImage, .main a  {
+    margin-top: 2em;
+}
+.productPageRating {
+    cursor: pointer;
+}
+/* ******************** Reviews styles ******************** */
+.reviews {
+    padding: 25px 25px 10px 25px;
+    box-sizing: border-box;
+
+    border: 2px solid #e6ecee;
+    border-radius: 4px;
+    box-shadow: 0 3px 3px 0 #ccc;
+    margin-left: 450px;
+}
+.reviews textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 4em;
+    font-size: 2em;
+    width: 100%;
+    max-width: 100%;
+    padding: 5px;
+    background-color: rgba(0,80,0,.1);
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,.1) inset;
+    outline: none;
+    overflow: auto;
+}
+.reviews textarea:focus {
+    background-color: transparent;
+    border: 1px solid #5389c8;
+    box-shadow: 0 0 3px 3px rgba(83,137,200,.3);
+}
+.reviews a {
+    margin: 20px 0;
+}
+.commentBox {
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    background-color: white;
+    padding: 10px;
+    margin-top: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.date, .rating, .comment {
+    font-size: 1.4em;
+}
+.date {
+    font-style: italic;
+}
+/* ******************** Media ******************** */
+@media screen and (max-width: 1300px) {
+    .catalogBox {
+        width: 32%;
+    }
+}
+@media screen and (max-width: 980px) {
+    .catalogBox {
+        width: 48%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .catalogBox {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+    .logoContainer {
+        margin-top: 5px;
+    }
+    .signature {
+        font-size: 2.1em;
+    }
+    .signature:before {
+        bottom: 0;
+    }
+}
+@media screen and (max-width: 602px) {
+    .main:after {
+        height: 140px;
+    }
+    .logoContainer {
+        box-sizing: border-box;
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    header .button {
+        float: left;
+        margin: 0 0 0 40px ;
+    }
+    footer span {
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 420px) {
+    .main {
+        padding: 30px 10px;
+    }
+    .logoContainer {
+        margin-left: 10px;
+    }
+    .signature {
+        padding-left: 45px;
+    }
+    header a, header .button {
+        margin: 0 10px 0 10px;
+    }
+    footer span {
+        margin: 0 10px;
+    }
+}
+
+/* ******************** PRODUCT PAGE styles ******************** */
+@media screen and (max-width: 900px) {
+    .reviews, .productPageBox {
+        float: none;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .productPageBox {
+        width: auto;
+    }
+    .reviews {
+        margin-top: 40px;
+        margin-left: 0;
+    }
+    .productPageImage {
+        padding-top: 60%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .productDescription {
+        font-size: 1.5em;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ******************** fixes for Bower components styles ******************** */
+.ngdialog-content {
+    position: relative;
+    width: 300px !important;
+    height: 240px;
+    border-radius: 5px;
+    color: #777777 !important;
+}
+.ngdialog-content input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 2em;
+    font-size: 1.5em;
+    width: 100%;
+    padding: 5px;
+    margin-top: 15px;
+    background-color: rgba(0,80,0,.1);
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,.1) inset;
+    outline: none;
+    overflow: auto;
+}
+.ngdialog-content input:focus {
+    background-color: white;
+}
+.ngdialog-content a {
+    float: right;
+    margin-right: 0;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.ngdialog-close {
+    outline: none !important;
+}
+.toast {
+    font-size: 16px;
+}
+.toast-top-right {
+    top: 102px;
+    right: 12px;
+}

@@ -1,0 +1,47 @@
+<div class="main fullArea clear-fix">
+    <div class="productPageBox">
+        <h2 class="productPageTitle">{{ product.title }}</h2>
+        <div class="productPageImage"
+             ng-style="{'background-image':'url(http://smktesting.herokuapp.com/static/' + product.img + ')'}"></div>
+
+        <div class="productDescription">{{ product.text }}</div>
+    </div>
+
+    <div class="reviews">
+        <div ng-if="$root.token">
+            <textarea placeholder="Type your review..." ng-model="review.text"></textarea>
+            <div class="productPageRating" ng-mouseleave="reviewHover = 0">
+                <div class="star"
+                     ng-class="{activeStar: review.rate >= 1 || reviewHover >= 1}"
+                     ng-mouseover="reviewHover = 1"
+                     ng-click="review.rate = 1"></div>
+                <div class="star"
+                     ng-class="{activeStar: review.rate >= 2 || reviewHover >= 2}"
+                     ng-mouseover="reviewHover = 2"
+                     ng-click="review.rate = 2"></div>
+                <div class="star"
+                     ng-class="{activeStar: review.rate >= 3 || reviewHover >= 3}"
+                     ng-mouseover="reviewHover = 3"
+                     ng-click="review.rate = 3"></div>
+                <div class="star"
+                     ng-class="{activeStar: review.rate >= 4 || reviewHover >= 4}"
+                     ng-mouseover="reviewHover = 4"
+                     ng-click="review.rate = 4"></div>
+                <div class="star"
+                     ng-class="{activeStar: review.rate >= 5 || reviewHover >= 5}"
+                     ng-mouseover="reviewHover = 5"
+                     ng-click="review.rate = 5"></div>
+            </div>
+            <a class="button" ng-click="addReviewBtnClick()">Submit Review</a>
+        </div>
+
+        <h3>Reviews</h3>
+
+        <div class="commentBox" ng-repeat="review in reviews | orderBy : reviewDate : true">
+            <div class="date">{{reviewDate(review) | date:'MM.dd.yyyy h:mma'}}</div>
+            <div class="rating">Rating: {{ review.rate }}</div>
+            <div class="comment">{{ review.text }}</div>
+        </div>
+        <a class="button" href="#">Return</a>
+    </div>
+</div>
